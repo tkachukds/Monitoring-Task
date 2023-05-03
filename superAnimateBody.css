@@ -4,20 +4,21 @@
     z-index: -9999;
     width: 100%;
     height: 200%;
-    font-size:30px;
+    font-size:10px;
     background: none;
-    position: absolute;
     animation: bodyAnime 900s infinite alternate;
   }
 
   @keyframes bodyAnime {
     100% {
+      opacity: .2;
       background:
         radial-gradient(200px at left  400px top 150px,#ff53bb 100%,#0000),
         radial-gradient(200px at right 400px bottom 150px,#00f8d3 100%,#0000);
-      opacity: .5;
+      opacity: .6;
       transform: rotate(36000deg);
       transition: .5s,600s linear transform;
+      opacity: .2;
     }
 }
 
@@ -25,9 +26,8 @@
   #animate:before {
     content: "";
     position: absolute;
-    inset: 0px;
-    padding: 10px;
-    border-radius: 600px; 
+    inset: 1000px;
+    border-radius:0px; 
     background: conic-gradient(
           #ff53bb ,
           #0000 30deg 120deg,
@@ -58,17 +58,17 @@
   #animate:after {
     transition:.5s, 99999s 99999s transform;
   }
-
-  #animate:before {
-    background-color: #222;
-  }
   
   body {
     background-color: #111;
   }
 
   #blockanimate {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     position: absolute;
+    z-index: -9999;
+    margin-left: 25%;
+    margin-right: auto;
+    margin-top: auto;
 }

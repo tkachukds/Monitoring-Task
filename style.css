@@ -18,8 +18,8 @@ button {
 }
 
 #boxPLANECREATER {
-    z-index: 0;
-    background-color: #eeecec;
+z-index: 0;
+background-color: #eeecec;
 border-style: dotted solid;
-
+width: 90%;
 }
