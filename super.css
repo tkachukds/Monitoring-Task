@@ -1,10 +1,4 @@
-#blockanimate {
-    width: 100%;
-    height: 100%;
-    margin-left: 25%;
-    top: 50%;
-    z-index: 999;
-}
+
 
 #animate {
     z-index: -9999;
@@ -13,13 +7,12 @@
     font-size:30px;
     background: none;
     position: absolute;
-
   }
   #animate:before {
     content: "";
     position: absolute;
     inset: 0px;
-    padding: 0px;
+    padding: 10px;
     border-radius: 600px; 
     background: conic-gradient(
           #ff53bb ,
@@ -34,6 +27,8 @@
     -webkit-mask-composite: xor;
             mask-composite: intersect
   }
+
+
   #animate:after {
     content: "";
     position: absolute;
@@ -49,21 +44,34 @@
   #animate:after {
     transition:.5s, 99999s 99999s transform;
   }
-  #animate:hover {
-    box-shadow: 0 0 0 0px #666;
-  }
-  
-  #animate:before,
-  #animate:after {
-    transform: rotate(36000deg);
-    transition: .5s,600s linear transform;
-  }
+
   #animate:before {
     background-color: #222;
+    border: 2px solid #333;
      
   }
   
   body {
     background-color: #111;
   }
-  
+
+  #blockanimate {
+    width: 100%;
+    height: 100%;
+    margin-left: 25%;
+    top: 50%;
+}
+
+  #animate:hover:before,
+  #animate:hover:after {
+    margin: auto;
+    transform: rotate(36000deg);
+    transition: .5s,600s linear transform;
+  }
+
+#boxPLANECREATER:hover:before,
+#boxPLANECREATER:hover:after {
+z-index: 0;
+background-color: #c4c4c4;
+border-style: dotted solid;
+}
