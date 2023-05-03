@@ -16,7 +16,7 @@ button {
 }
 #header {
 top: 3px;
-max-height: 30px;
+width: 100%;
 position: fixed;
 }
 
