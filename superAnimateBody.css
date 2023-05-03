@@ -6,7 +6,7 @@
     height: 200%;
     font-size:10px;
     background: none;
-    animation: bodyAnime 900s infinite alternate;
+    animation: bodyAnime 3000s infinite alternate;
   }
 
   @keyframes bodyAnime {
@@ -15,7 +15,7 @@
       background:
         radial-gradient(200px at left  400px top 150px,#ff53bb 100%,#0000),
         radial-gradient(200px at right 400px bottom 150px,#00f8d3 100%,#0000);
-      opacity: .6;
+      opacity: .5;
       transform: rotate(36000deg);
       transition: .5s,600s linear transform;
       opacity: .2;
