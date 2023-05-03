@@ -2,12 +2,12 @@
 
 #animate {
     z-index: -9999;
-    width: 600px;
-    height: 600px;
+    width: 100%;
+    height: 200%;
     font-size:30px;
     background: none;
     position: absolute;
-    animation: bodyAnime 100s infinite alternate;
+    animation: bodyAnime 900s infinite alternate;
   }
 
   @keyframes bodyAnime {
@@ -15,7 +15,6 @@
       background:
         radial-gradient(200px at left  400px top 150px,#ff53bb 100%,#0000),
         radial-gradient(200px at right 400px bottom 150px,#00f8d3 100%,#0000);
-      filter: blur(120px);
       opacity: .5;
       transform: rotate(36000deg);
       transition: .5s,600s linear transform;
@@ -62,8 +61,6 @@
 
   #animate:before {
     background-color: #222;
-    border: 2px solid #333;
-     
   }
   
   body {
@@ -73,6 +70,5 @@
   #blockanimate {
     width: 100%;
     height: 100%;
-    margin-left: 25%;
     position: absolute;
 }
