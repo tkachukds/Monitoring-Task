@@ -1,9 +1,11 @@
-h1 {
-  width: 100%;
-  font-size: 30px;
-  background-image: linear-gradient(to left, #4625a3, #9585e4);
+button {
+  font-size: 20px;
+  background-image: linear-gradient(to left, #f30000ae, #ff969687);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  }
-  
+
+
+  border: none;
+  border-radius: 2px;
+}

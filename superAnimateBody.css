@@ -6,7 +6,7 @@
     height: 200%;
     font-size:10px;
     background: none;
-    animation: bodyAnime 2000s infinite alternate;
+    animation: bodyAnime 1000s infinite alternate;
   }
 
   @keyframes bodyAnime {
@@ -16,6 +16,11 @@
       opacity: .5;
       transition: .5s,600s linear transform;
       opacity: .2;
+      background: conic-gradient(
+          #f60000 ,
+          #0078f8 150deg 180deg,
+          #f90303 330deg
+      );
     }
 }
 
@@ -26,11 +31,11 @@
     inset: 1000px;
     border-radius:0px; 
     background: conic-gradient(
-          #ff53bb ,
+          #f60000 ,
           #0000 30deg 120deg,
-          #00f8d3 150deg 180deg,
+          #0078f8 150deg 180deg,
           #0000 210deg 300deg,
-          #ff53bb 330deg
+          #f90303 330deg
       );
     -webkit-mask:
       linear-gradient(#000 0 0) content-box,
@@ -45,8 +50,8 @@
     position: absolute;
     inset: -100px;
     background:
-      radial-gradient(200px at left  400px top 150px,#ff53bb 100%,#0000),
-      radial-gradient(200px at right 400px bottom 150px,#00f8d3 100%,#0000);
+      radial-gradient(200px at left  400px top 150px,#ff0000 100%,#0000),
+      radial-gradient(200px at right 400px bottom 150px,#003af8 100%,#0000);
     filter: blur(120px);
     opacity: .5;
   }
