@@ -6,9 +6,14 @@
     text-align: center;
 }
 #header {
+  margin-top: 3px;
 top: 3px;
 width: 100%;
 position: fixed;
+}
+
+#buttonsMenu {
+  top:0px;
 }
 
 #boxPLANECREATER {
@@ -19,4 +24,9 @@ background-color: #eeecec;
 border-style: dotted solid;
 width: 90%;
 height: 50%;
+}
+
+html {
+  top:0px;
+
 }
