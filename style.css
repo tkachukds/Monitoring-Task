@@ -1,0 +1,25 @@
+.centred {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+header {
+max-height: 30px;
+}
+
+button {
+  font-size: 12px;
+  height: 80px;
+  width: 100px;
+  outline: none;
+  margin: 0px;
+  border: none;
+  border-radius: 2px;
+}
+
+#boxPLANECREATER {
+    z-index: 0;
+    background-color: #c4c4c4;
+border-style: dotted solid;
+
+}
