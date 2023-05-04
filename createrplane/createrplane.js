@@ -29,21 +29,27 @@ function editSIGNATURE() {
 }
 
 function UpdateTextPlan(){
+    //обновление плана для е-мейла
     const textFromDateTXTbox = document.getElementById('datePlane').innerText;
     
 let standarTextMail = "Здравствуйте."+
-"\n Сотрудники ТО планируют посетить Ваш ППС "+textFromDateTXTbox+". \n Уточните у Администратора, Менеджера, старшего кассира какие дополнительные работы нужно выполнить на вашем ППС. \n В письме на почту  просьба перечислить дополнительные работы. Так же, при наличии оборудования, которое необходимо забрать в ТО, прошу приготовить это оборудование и сопровождающую его накладную."+
-"Ответственный сотрудник ТО и список ППС для проведения работ:";
+"\n Сотрудники ТО планируют посетить Ваш ППС "+textFromDateTXTbox+". \n Уточните у Администратора, Менеджера, старшего кассира какие дополнительные работы нужно выполнить на вашем ППС. \n В письме на почту  просьба перечислить дополнительные работы. \n Так же, при наличии оборудования, которое необходимо забрать в ТО, прошу приготовить это оборудование и сопровождающую его накладную."+
+"\n Ответственный сотрудник ТО и список ППС для проведения работ:";
 
-    let textDateForPlan = 'План на '+ textFromDateTXTbox+'.';
-
-textForMAILplan = standarTextMail + textSIGNATURE;
+const textFromPLANjob = document.getElementById('allplan').innerText;
+textForMAILplan = standarTextMail + ' \n \n ' + textFromPLANjob + textSIGNATURE;
 
 const boxTEXTFORMAIL = document.getElementById('planforMAIL')
 boxTEXTFORMAIL.innerText = textForMAILplan;
 
+// обновление инфы для плана выездных
+let textDateForFLELDPlan = 'План на '+ textFromDateTXTbox+'.';
+
+
     setTimeout(UpdateTextPlan, 1000);
 }
+
+
 
 window.onload = function() {
 editDate();
