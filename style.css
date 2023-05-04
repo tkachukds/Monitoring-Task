@@ -20,7 +20,7 @@ position: fixed;
   position: block;
 margin-top: 70px;
 z-index: 0;
-background-color: #eeecec;
+background-origin: border-box;
 border-style: dotted solid;
 width: 90%;
 height: 100%;
