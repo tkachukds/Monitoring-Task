@@ -3,11 +3,11 @@ let textForMAILplan;
 
 
 
-let textSIGNATURE = "\n --------------------" +
-"\n С уважением,"+
-"\n Ткачук Денис,"+
-"\n сотрудник ТО"+
-'\n Подмосковного филиала ООО "ФОНКОР"'+
+let textSIGNATURE = "<p> --------------------" +
+"<p> С уважением,"+
+"<p> Ткачук Денис,"+
+"<p> сотрудник ТО"+
+'<p> Подмосковного филиала ООО "ФОНКОР"'+
 "";
 
 
@@ -33,11 +33,11 @@ function updateMAILplan(){
  const textFromDateTXTbox = document.getElementById('datePlane').innerHTML;
     
  let standarTextMail = "Здравствуйте."+
- "\n Сотрудники ТО планируют посетить Ваш ППС "+`<b>${textFromDateTXTbox}</b>`+". \n Уточните у Администратора, Менеджера, старшего кассира какие дополнительные работы нужно выполнить на вашем ППС. \n В письме на почту  просьба перечислить дополнительные работы. \n Так же, при наличии оборудования, которое необходимо забрать в ТО, прошу приготовить это оборудование и сопровождающую его накладную."+
- "\n Ответственный сотрудник ТО и список ППС для проведения работ:";
+ "<p> Сотрудники ТО планируют посетить Ваш ППС "+`<b>${textFromDateTXTbox}</b>`+". <p> Уточните у Администратора, Менеджера, старшего кассира какие дополнительные работы нужно выполнить на вашем ППС. <p> В письме на почту  просьба перечислить дополнительные работы. <p> Так же, при наличии оборудования, которое необходимо забрать в ТО, прошу приготовить это оборудование и сопровождающую его накладную."+
+ "<p> Ответственный сотрудник ТО и список ППС для проведения работ:";
  
  const textFromPLANjob = document.getElementById('allplan').innerHTML;
- textForMAILplan = standarTextMail + ' \n \n ' + textFromPLANjob + textSIGNATURE;
+ textForMAILplan = standarTextMail + ' <p> <p> ' + textFromPLANjob + textSIGNATURE;
  
  const boxTEXTFORMAIL = document.getElementById('planforMAIL')
  boxTEXTFORMAIL.textContent = textForMAILplan;
