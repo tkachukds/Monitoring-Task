@@ -15,7 +15,7 @@ var month = dateObj.getUTCMonth() + 1; //months from 1-12
 var day = dateObj.getUTCDate() +1;
 var year = dateObj.getUTCFullYear();
 newdate = day + "." + month + "." + year;
-datePlane.value =  newdate;
+datePlane.innerText =  newdate;
 }
 
 function editSIGNATURE() {
