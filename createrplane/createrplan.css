@@ -8,12 +8,14 @@
 }
 
 #planforFLELD {
+    white-space: pre;
     width: 50%;
 float: left;
 height: 50%;
 }
 
 #planforMAIL {
+    white-space: pre;
     width: 50%;
     float: right;
 height: 50%;
