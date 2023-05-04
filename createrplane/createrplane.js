@@ -28,22 +28,27 @@ function editSIGNATURE() {
     signatureMAIL.innerText = textSIGNATURE;
 }
 
-function UpdateTextPlan(){
-    //обновление плана для е-мейла
-    const textFromDateTXTbox = document.getElementById('datePlane').innerHTML;
+function updateMAILplan(){
+ //обновление плана для е-мейла
+ const textFromDateTXTbox = document.getElementById('datePlane').innerHTML;
     
-let standarTextMail = "Здравствуйте."+
-"\n Сотрудники ТО планируют посетить Ваш ППС "+`${textFromDateTXTbox}`+". \n Уточните у Администратора, Менеджера, старшего кассира какие дополнительные работы нужно выполнить на вашем ППС. \n В письме на почту  просьба перечислить дополнительные работы. \n Так же, при наличии оборудования, которое необходимо забрать в ТО, прошу приготовить это оборудование и сопровождающую его накладную."+
-"\n Ответственный сотрудник ТО и список ППС для проведения работ:";
+ let standarTextMail = "Здравствуйте."+
+ "\n Сотрудники ТО планируют посетить Ваш ППС "+`<b>${textFromDateTXTbox}</b>`+". \n Уточните у Администратора, Менеджера, старшего кассира какие дополнительные работы нужно выполнить на вашем ППС. \n В письме на почту  просьба перечислить дополнительные работы. \n Так же, при наличии оборудования, которое необходимо забрать в ТО, прошу приготовить это оборудование и сопровождающую его накладную."+
+ "\n Ответственный сотрудник ТО и список ППС для проведения работ:";
+ 
+ const textFromPLANjob = document.getElementById('allplan').innerHTML;
+ textForMAILplan = standarTextMail + ' \n \n ' + textFromPLANjob + textSIGNATURE;
+ 
+ const boxTEXTFORMAIL = document.getElementById('planforMAIL')
+ boxTEXTFORMAIL.textContent = textForMAILplan;
 
-const textFromPLANjob = document.getElementById('allplan').innerHTML;
-textForMAILplan = standarTextMail + ' \n \n ' + textFromPLANjob + textSIGNATURE;
+}
 
-const boxTEXTFORMAIL = document.getElementById('planforMAIL')
-boxTEXTFORMAIL.textContent = textForMAILplan;
+function UpdateTextPlan(){
+//обновление плана для е-мейла
+updateMAILplan();
 // обновление инфы для плана выездных
-let textDateForFLELDPlan = 'План на '+ textFromDateTXTbox+'.';
-
+// let textDateForFLELDPlan = 'План на '+ textFromDateTXTbox + '.';
 
     setTimeout(UpdateTextPlan, 1000);
 }
