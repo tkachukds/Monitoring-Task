@@ -30,21 +30,17 @@ function editSIGNATURE() {
 
 function UpdateTextPlan(){
     //обновление плана для е-мейла
-    const textFromDateTXTbox = document.getElementById('datePlane').innerText;
+    const textFromDateTXTbox = document.getElementById('datePlane').innerHTML;
     
 let standarTextMail = "Здравствуйте."+
 "\n Сотрудники ТО планируют посетить Ваш ППС "+`${textFromDateTXTbox}`+". \n Уточните у Администратора, Менеджера, старшего кассира какие дополнительные работы нужно выполнить на вашем ППС. \n В письме на почту  просьба перечислить дополнительные работы. \n Так же, при наличии оборудования, которое необходимо забрать в ТО, прошу приготовить это оборудование и сопровождающую его накладную."+
 "\n Ответственный сотрудник ТО и список ППС для проведения работ:";
 
-const textFromPLANjob = document.getElementById('allplan').innerText;
+const textFromPLANjob = document.getElementById('allplan').innerHTML;
 textForMAILplan = standarTextMail + ' \n \n ' + textFromPLANjob + textSIGNATURE;
 
 const boxTEXTFORMAIL = document.getElementById('planforMAIL')
-boxTEXTFORMAIL.innerText = textForMAILplan;
-
-var myText = `${textFromDateTXTbox}`;
-console.log(myText)
-
+boxTEXTFORMAIL.textContent = textForMAILplan;
 // обновление инфы для плана выездных
 let textDateForFLELDPlan = 'План на '+ textFromDateTXTbox+'.';
 

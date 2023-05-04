@@ -1,8 +1,10 @@
 #date {
+    white-space: pre;
     width: 100%;
 }
 
 #allplan {
+    white-space: pre;
     width: 100%;
     height: 40%;
 }
