@@ -1,4 +1,9 @@
-let textSIGNATURE = "--------------------" +
+let textForFLELDplan;
+let textForMAILplan;
+
+
+
+let textSIGNATURE = "\n --------------------" +
 "\n С уважением,"+
 "\n Ткачук Денис,"+
 "\n сотрудник ТО"+
@@ -23,9 +28,18 @@ function editSIGNATURE() {
     signatureMAIL.innerText = textSIGNATURE;
 }
 
-function UpdateTextPlan(){
 
-    setTimeout(yourFunction, 5000);
+
+function UpdateTextPlan(){
+    const textFromDateTXTbox = document.getElementById('datePlane').innerText;
+    let textDateForPlan = 'План на '+ textFromDateTXTbox+'.';
+textForMAILplan = textDateForPlan + textSIGNATURE;
+
+
+const boxTEXTFORMAIL = document.getElementById('planforMAIL')
+boxTEXTFORMAIL.innerText = textForMAILplan;
+
+    setTimeout(UpdateTextPlan, 1000);
 }
 
 window.onload = function() {
