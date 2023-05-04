@@ -23,7 +23,14 @@ function editSIGNATURE() {
     signatureMAIL.innerText = textSIGNATURE;
 }
 
+function UpdateTextPlan(){
+
+    setTimeout(yourFunction, 5000);
+}
+
 window.onload = function() {
 editDate();
-editSIGNATURE()
+editSIGNATURE();
+UpdateTextPlan();
 }
+
