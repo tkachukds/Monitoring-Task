@@ -20,3 +20,17 @@ float: left;
 
 width: 100%;
 }
+
+.dateBox {
+    width: 30%;
+}
+
+.signatureBox {
+    width: 30%;
+}
+
+.jobtextBox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
