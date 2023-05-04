@@ -25,7 +25,7 @@ datePlane.innerText =  newdate;
 
 function editSIGNATURE() {
     let signatureMAIL = document.getElementById('signatureMAIL');
-    signatureMAIL.innerText = textSIGNATURE;
+    signatureMAIL.innerHTML = textSIGNATURE;
 }
 
 function updateMAILplan(){
@@ -40,7 +40,7 @@ function updateMAILplan(){
  textForMAILplan = standarTextMail + ' <p> <p> ' + textFromPLANjob + textSIGNATURE;
  
  const boxTEXTFORMAIL = document.getElementById('planforMAIL')
- boxTEXTFORMAIL.textContent = textForMAILplan;
+ boxTEXTFORMAIL.innerHTML = textForMAILplan;
 
 }
 
