@@ -28,13 +28,16 @@ function editSIGNATURE() {
     signatureMAIL.innerText = textSIGNATURE;
 }
 
-
-
 function UpdateTextPlan(){
     const textFromDateTXTbox = document.getElementById('datePlane').innerText;
-    let textDateForPlan = 'План на '+ textFromDateTXTbox+'.';
-textForMAILplan = textDateForPlan + textSIGNATURE;
+    
+let standarTextMail = "Здравствуйте."+
+"\n Сотрудники ТО планируют посетить Ваш ППС "+textFromDateTXTbox+". \n Уточните у Администратора, Менеджера, старшего кассира какие дополнительные работы нужно выполнить на вашем ППС. \n В письме на почту  просьба перечислить дополнительные работы. Так же, при наличии оборудования, которое необходимо забрать в ТО, прошу приготовить это оборудование и сопровождающую его накладную."+
+"Ответственный сотрудник ТО и список ППС для проведения работ:";
 
+    let textDateForPlan = 'План на '+ textFromDateTXTbox+'.';
+
+textForMAILplan = standarTextMail + textSIGNATURE;
 
 const boxTEXTFORMAIL = document.getElementById('planforMAIL')
 boxTEXTFORMAIL.innerText = textForMAILplan;
