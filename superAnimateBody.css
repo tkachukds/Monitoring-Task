@@ -18,9 +18,9 @@
     100% {
       opacity: .2;
       transform: rotate(36000deg);
-      transition: .5s,600s linear transform;
       opacity: .2;
       background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      opacity: .2;
     }
 }
 

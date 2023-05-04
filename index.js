@@ -10,6 +10,6 @@ function load_PLANEbox() {
 //////////////////////////////////////////////////////////////
 window.onload = function() {
 // load_header();
-// load_PLANEbox();
+load_PLANEbox();
 
 }
