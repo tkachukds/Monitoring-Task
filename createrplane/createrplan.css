@@ -1,3 +1,8 @@
+.card {
+    border: thick double #32a1ce;
+  }
+
+
 #date {
     width: 100%;
 }
