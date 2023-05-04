@@ -36,7 +36,7 @@ function updateMAILplan(){
  "<p> Сотрудники ТО планируют посетить Ваш ППС "+`<b>${textFromDateTXTbox}</b>`+". <p> Уточните у Администратора, Менеджера, старшего кассира какие дополнительные работы нужно выполнить на вашем ППС. <p> В письме на почту  просьба перечислить дополнительные работы. <p> Так же, при наличии оборудования, которое необходимо забрать в ТО, прошу приготовить это оборудование и сопровождающую его накладную."+
  "<p> Ответственный сотрудник ТО и список ППС для проведения работ:";
  
- const textFromPLANjob = document.getElementById('allplan').innerHTML;
+ const textFromPLANjob = document.getElementById('MAILplan').innerHTML;
  textForMAILplan = standarTextMail + ' <p> <p> ' + textFromPLANjob + textSIGNATURE;
  
  const boxTEXTFORMAIL = document.getElementById('planforMAIL')

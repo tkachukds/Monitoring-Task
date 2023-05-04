@@ -2,27 +2,17 @@
     border: thick double #32a1ce;
   }
 
-
-#date {
-    width: 100%;
-}
-
-#allplan {
-    width: 100%;
-}
-
-#planforFLELD {
+/* #planforFLELD {
 width: 50%;
 float: left;
-}
+} */
 
-#planforMAIL {
+/* #planforMAIL {
     width: 50%;
     float: right;
-}
+} */
 
 #signatureMAIL {
-
 width: 100%;
 }
 
@@ -43,3 +33,6 @@ width: 100%;
 /* #textPLAN{
     display: inline-block;
 } */
+.boxTEXT {
+    border: dashed red;
+  }
