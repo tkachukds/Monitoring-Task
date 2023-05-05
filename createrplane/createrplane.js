@@ -1,5 +1,7 @@
 let textFromDateTXTbox = document.getElementById('datePlane').innerHTML; // текстблок ДАТЫ 
 let signatureMAIL = document.getElementById('signatureMAIL'); // текстблок Подпись для е мейла
+const textFromPlaneFLELD = document.getElementById('FLELDplan').innerHTML; // текстблок для внесения плана для выездных
+const textFromPLANjob = document.getElementById('MAILplan').innerHTML; // текст бокс для внемения плана для е мейл сообщения
 
 let textForFLELDplan;
 let textForMAILplan;
@@ -46,7 +48,7 @@ let textFromDateTXTbox = document.getElementById('datePlane').innerHTML; // те
 let standartTEXTforMAIL = textForMail[0] + textFromDateTXTbox + textForMail[1];
 
 let standartTEXTMAIL = standartTEXTforMAIL;
- const textFromPLANjob = document.getElementById('MAILplan').innerHTML;
+ const textFromPLANjob = document.getElementById('MAILplan').innerHTML; // текст бокс для внемения плана для е мейл сообщения
  textForMAILplan = standartTEXTMAIL + ' <p> <p> ' + textFromPLANjob + textSIGNATURE;
  
  const boxTEXTFORMAIL = document.getElementById('planforMAIL')
@@ -63,7 +65,7 @@ function UpdateTextPlan(){
 //                       обновление плана для выездных
 function createFLELDplan(){
     let textFromDateTXTbox = document.getElementById('datePlane').innerHTML; // текстблок ДАТЫ 
-    const textFromPlaneFLELD = document.getElementById('FLELDplan').innerHTML;
+    const textFromPlaneFLELD = document.getElementById('FLELDplan').innerHTML; // текстблок для внесения плана для выездных
     let constructorTxtFLELD = `<p><span style="text-decoration: underline;"><strong>План работ на ${textFromDateTXTbox}</strong></span></p> ${textFromPlaneFLELD}`;
     const boxTEXTFORFLELD = document.getElementById('planforFLELD')
     boxTEXTFORFLELD.innerHTML = constructorTxtFLELD;
@@ -73,9 +75,13 @@ function createFLELDplan(){
 
 function UpdateFLELDPlan(){
     createFLELDplan();
-    setTimeout(UpdateFLELDPlan, 2000);
+    setTimeout(UpdateFLELDPlan, 1000);
 }
 ///////////////////////////////////////////////////////////////////////// 
+//скопировать текст из плана для выездных в план для е мейл 
+function copyPlanfromFLELinMAILplan(){
+
+}
 
 window.onload = function() {
 editDate();
