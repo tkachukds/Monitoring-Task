@@ -59,7 +59,7 @@ function createFLELDplan(){
 
     const textFromPlaneFLELD = document.getElementById('FLELDplan').innerHTML;
 
-    let constructorTxtFLELD = `${textFromPlaneFLELD}`;
+    let constructorTxtFLELD = `<p><span style="text-decoration: underline;"><strong>План работ на ${textFromDateTXTbox}</strong></span></p> ${textFromPlaneFLELD}`;
 
     const boxTEXTFORFLELD = document.getElementById('planforFLELD')
     boxTEXTFORFLELD.innerHTML = constructorTxtFLELD;
