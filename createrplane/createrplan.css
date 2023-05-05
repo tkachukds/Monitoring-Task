@@ -1,12 +1,11 @@
-/* #planforFLELD {
-width: 50%;
-float: left;
-} */
+#planforFLELD {
+    min-height: 500px;
+}
 
-/* #planforMAIL {
-    width: 50%;
-    float: right;
-} */
+#planforMAIL {
+    min-height: 500px;
+}
+
 #datePlane {
     text-align: center;
     font-size: 20px;
