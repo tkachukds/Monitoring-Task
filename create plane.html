@@ -3,8 +3,8 @@
 
 <header>
   <button class="glow-on-hover" type="button" onclick="show('standartTEXT');">Дата и подпись</button>
-  <button class="glow-on-hover" type="button" onclick="show('boxEDITER');">Изменить план</button>
-  <button class="glow-on-hover" type="button" onclick="show('executTEXT');">Готовый план</button>
+  <button class="glow-on-hover" type="button" onclick="show('editerPLAN');">Изменить план</button>
+  <button class="glow-on-hover" type="button" onclick="show('EXECUTBOX');">Готовый план</button>
 </header>
 
 <div id="textPLAN">
@@ -21,9 +21,8 @@
   </div>
 </div>
 
-
+<div id="editerPLAN">
 <div id="boxEDITER" class="card ">
-
  <div class="boxEditPlaneFLELD">
     <h4>План ДЛЯ ВЫЕЗДНЫХ</h4>
     <div id="FLELDplan" class="boxTEXT" contenteditable="true">
@@ -35,20 +34,21 @@
     <div id="MAILplan" class="boxTEXT" contenteditable="true">
 
     </div>
- </div>
+ </div></div>
 
 </div>
 
+<div id="EXECUTBOX">
 <div class=" card" id="executTEXT">
- <div class="boxEXEplan">
+ <div class="boxEXEplan" id="boxEXEplan">
    <h4>Готовый план для выездных:</h4>
    <div id="planforFLELD" class="boxTEXT" contenteditable="true"></div>
 </div> 
-   <div class="boxEXEmail">
+   <div class="boxEXEmail" id="boxEXEmail">
     <h4>Готовое письмо:</h4>
     <div id="planforMAIL" class="boxTEXT" contenteditable="true">готовое письмо</div>
   </div>
-</div>
+</div></div>
 
 
 
