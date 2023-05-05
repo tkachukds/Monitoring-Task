@@ -17,7 +17,6 @@ color: #fff;
 
 #executTEXT {
     display: flex;
-    margin-top: 200px;
 }
 
 
@@ -35,7 +34,6 @@ color: #fff;
 
 
 #standartTEXT {
-    display: none;
     top: 0px;
     margin-top: 0px;
   width: 20%;
