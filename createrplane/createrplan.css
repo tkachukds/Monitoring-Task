@@ -76,3 +76,9 @@ width: 75%;
     border: 3px solid #ecbcbc;
   }
 
+button {
+    font-size: 16px;
+    color:#fff!important;
+    text-shadow: 1px 1px 1px #000;
+    background-color: #ffffff8a;
+}
