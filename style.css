@@ -18,7 +18,7 @@ position: fixed;
 
 #boxPLANECREATER {
   position: block;
-margin-top: 70px;
+margin-top: 20px;
 z-index: 0;
 background-origin: border-box;
 border-style: dotted solid;
