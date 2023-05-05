@@ -1,7 +1,10 @@
 let textFromDateTXTbox = document.getElementById('datePlane').innerHTML; // текстблок ДАТЫ 
 let signatureMAIL = document.getElementById('signatureMAIL'); // текстблок Подпись для е мейла
-const textFromPlaneFLELD = document.getElementById('FLELDplan').innerHTML; // текстблок для внесения плана для выездных
-const textFromPLANjob = document.getElementById('MAILplan').innerHTML; // текст бокс для внемения плана для е мейл сообщения
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+ let txtFromPlaneFLELD = document.getElementById('FLELDplan'); // текстблок для внесения плана для выездных
+ let txtFromPLANjob = document.getElementById('MAILplan'); // текст бокс для внемения плана для е мейл сообщения
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
 let textForFLELDplan;
 let textForMAILplan;
@@ -67,11 +70,9 @@ function createFLELDplan(){
     let textFromDateTXTbox = document.getElementById('datePlane').innerHTML; // текстблок ДАТЫ 
     const textFromPlaneFLELD = document.getElementById('FLELDplan').innerHTML; // текстблок для внесения плана для выездных
     let constructorTxtFLELD = `<p><span style="text-decoration: underline;"><strong>План работ на ${textFromDateTXTbox}</strong></span></p> ${textFromPlaneFLELD}`;
-    const boxTEXTFORFLELD = document.getElementById('planforFLELD')
-    boxTEXTFORFLELD.innerHTML = constructorTxtFLELD;
+    const boxEXECOTtextFORFLELD = document.getElementById('planforFLELD')
+    boxEXECOTtextFORFLELD.innerHTML = constructorTxtFLELD;
 }
-
-
 
 function UpdateFLELDPlan(){
     createFLELDplan();
@@ -80,9 +81,10 @@ function UpdateFLELDPlan(){
 ///////////////////////////////////////////////////////////////////////// 
 //скопировать текст из плана для выездных в план для е мейл 
 function copyPlanfromFLELinMAILplan(){
-
+txtFromPLANjob.innerHTML = txtFromPlaneFLELD.innerHTML ;
 }
-
+/////////////////////////////////////////////////////////////////////////////
+// действия, когда код будет загружен полностью 
 window.onload = function() {
 editDate();
 editSIGNATURE();
