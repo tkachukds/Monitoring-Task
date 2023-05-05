@@ -93,10 +93,12 @@ function show(id) {
 //////////////////////////////////////////////////////////////////////////////
 // 
 function nextStep(step){
-if (step === '2') {
+if (step === '3') {
 document.getElementById('standartTEXT').style.display = 'none';
 document.getElementById('editerPLAN').style.display = 'initial';
 document.getElementById('EXECUTBOX').style.display = 'initial';
+} else if (step === '2'){
+  alert('шаг на реализации');
 } else if (step === 'execut'){
   
  }

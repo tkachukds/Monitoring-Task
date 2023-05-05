@@ -88,7 +88,7 @@ background-color: #000000ef;
 }
 
 #standartTEXT {
-    display: none;  
+    
     z-index: 0;
 
     }
@@ -109,9 +109,9 @@ background-color: #000000ef;
 }
 
 #editerPLAN {
-    display: none;
+   
 }
 
 #EXECUTBOX {
-    display: none;  
+ 
 }
