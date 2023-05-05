@@ -87,8 +87,8 @@ txtFromPLANjob.innerHTML = txtFromPlaneFLELD.innerHTML ;
 //скрыть/показать объекст
 function show(id) {
     let el = document.getElementById(id);
-    if (el.style.display === 'none') { el.style.display = 'initial';
-  } else {el.style.display = 'none';}
+    if (el.style.display === 'none') {el.style.display = 'initial';
+} else  {el.style.display = 'none'}
 }
 
 /////////////////////////////////////////////////////////////////////////////
