@@ -1,18 +1,38 @@
+let textFromDateTXTbox = document.getElementById('datePlane').innerHTML; // текстблок ДАТЫ 
+let signatureMAIL = document.getElementById('signatureMAIL'); // текстблок Подпись для е мейла
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+ let txtFromPlaneFLELD = document.getElementById('FLELDplan'); // текстблок для внесения плана для выездных
+ let txtFromPLANjob = document.getElementById('MAILplan'); // текст бокс для внемения плана для е мейл сообщения
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
 let textForFLELDplan;
 let textForMAILplan;
 
+let textForMail = [`Здравствуйте. <p> <p>
+Сотрудники ТО планируют посетить Ваш ППС <b>`,
+`</b>. 
+<p> Уточните у Администратора, Менеджера, старшего кассира какие дополнительные работы нужно выполнить на вашем ППС. 
+<p> В письме на почту <strong>help@mo-fonbet.ru</strong> просьба перечислить дополнительные работы. 
+<p> Так же, при наличии оборудования, которое необходимо забрать в ТО, прошу приготовить это оборудование и сопровождающую его накладную. 
+<p><p>
+Ответственный сотрудник ТО и список ППС для проведения работ:   `];
 
+let textSIGNATURE = `
+<p> --------------------
+<p> С уважением,
+<p> Ткачук Денис,
+<p> сотрудник ТО"
+<p> Подмосковного филиала ООО "ФОНКОР"
+`;
 
-let textSIGNATURE = "<p> --------------------" +
-"<p> С уважением,"+
-"<p> Ткачук Денис,"+
-"<p> сотрудник ТО"+
-'<p> Подмосковного филиала ООО "ФОНКОР"'+
-"";
-
-
-
-
+/////////////////////////////////////////////////////////////////////////////
+// Добавим в бокс подпись
+function editSIGNATURE() {
+    signatureMAIL.innerHTML = textSIGNATURE;
+}
+//////////////////////////////////////////////////////////////////////////////
+// Загрузить в бокст для даты - дату завтрашнего дня
 function editDate(){
 let datePlane = document.getElementById('datePlane');
 var dateObj = new Date();
@@ -23,24 +43,16 @@ newdate = day + "." + month + "." + year;
 datePlane.innerText =  newdate;
 }
 
-function editSIGNATURE() {
-    let signatureMAIL = document.getElementById('signatureMAIL');
-    signatureMAIL.innerHTML = textSIGNATURE;
-}
-
 //////////////////////////////////////////////////////////////////////////////
 //                       обновление плана для ПОЧТЫ
 
 function createMAILplan(){
- //обновление плана для е-мейла
- const textFromDateTXTbox = document.getElementById('datePlane').innerHTML;
-    
- let standarTextMail = "Здравствуйте."+
- "<p> Сотрудники ТО планируют посетить Ваш ППС "+`<b>${textFromDateTXTbox}</b>`+". <p> Уточните у Администратора, Менеджера, старшего кассира какие дополнительные работы нужно выполнить на вашем ППС. <p> В письме на почту  просьба перечислить дополнительные работы. <p> Так же, при наличии оборудования, которое необходимо забрать в ТО, прошу приготовить это оборудование и сопровождающую его накладную."+
- "<p> Ответственный сотрудник ТО и список ППС для проведения работ:";
- 
- const textFromPLANjob = document.getElementById('MAILplan').innerHTML;
- textForMAILplan = standarTextMail + ' <p> <p> ' + textFromPLANjob + textSIGNATURE;
+let textFromDateTXTbox = document.getElementById('datePlane').innerHTML; // текстблок ДАТЫ 
+let standartTEXTforMAIL = textForMail[0] + textFromDateTXTbox + textForMail[1];
+
+let standartTEXTMAIL = standartTEXTforMAIL;
+ const textFromPLANjob = document.getElementById('MAILplan').innerHTML; // текст бокс для внемения плана для е мейл сообщения
+ textForMAILplan = standartTEXTMAIL + ' <p> <p> ' + textFromPLANjob + textSIGNATURE;
  
  const boxTEXTFORMAIL = document.getElementById('planforMAIL')
  boxTEXTFORMAIL.innerHTML = textForMAILplan;
@@ -55,28 +67,35 @@ function UpdateTextPlan(){
 //////////////////////////////////////////////////////////////////////////////
 //                       обновление плана для выездных
 function createFLELDplan(){
-    const textFromDateTXTbox = document.getElementById('datePlane').innerHTML;
-
-    const textFromPlaneFLELD = document.getElementById('FLELDplan').innerHTML;
-
+    let textFromDateTXTbox = document.getElementById('datePlane').innerHTML; // текстблок ДАТЫ 
+    const textFromPlaneFLELD = document.getElementById('FLELDplan').innerHTML; // текстблок для внесения плана для выездных
     let constructorTxtFLELD = `<p><span style="text-decoration: underline;"><strong>План работ на ${textFromDateTXTbox}</strong></span></p> ${textFromPlaneFLELD}`;
-
-    const boxTEXTFORFLELD = document.getElementById('planforFLELD')
-    boxTEXTFORFLELD.innerHTML = constructorTxtFLELD;
+    const boxEXECOTtextFORFLELD = document.getElementById('planforFLELD')
+    boxEXECOTtextFORFLELD.innerHTML = constructorTxtFLELD;
 }
-
-
 
 function UpdateFLELDPlan(){
     createFLELDplan();
-    setTimeout(UpdateFLELDPlan, 2000);
+    setTimeout(UpdateFLELDPlan, 1000);
 }
 ///////////////////////////////////////////////////////////////////////// 
+//скопировать текст из плана для выездных в план для е мейл 
+function copyPlanfromFLELinMAILplan(){
+txtFromPLANjob.innerHTML = txtFromPlaneFLELD.innerHTML ;
+}
+/////////////////////////////////////////////////////////////////////////////
+//скрыть/показать объекст
+function show(id) {
+    let el = document.getElementById(id);
+    if (el.style.display === 'none') { el.style.display = 'initial';
+  } else {el.style.display = 'none';}
+}
 
+/////////////////////////////////////////////////////////////////////////////
+// действия, когда код для страницы будет загружен полностью и страница будет полносью готова
 window.onload = function() {
 editDate();
 editSIGNATURE();
 UpdateTextPlan();
 UpdateFLELDPlan();
 }
-
