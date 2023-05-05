@@ -28,7 +28,10 @@ function editSIGNATURE() {
     signatureMAIL.innerHTML = textSIGNATURE;
 }
 
-function updateMAILplan(){
+//////////////////////////////////////////////////////////////////////////////
+//                       обновление плана для ПОЧТЫ
+
+function createMAILplan(){
  //обновление плана для е-мейла
  const textFromDateTXTbox = document.getElementById('datePlane').innerHTML;
     
@@ -45,19 +48,35 @@ function updateMAILplan(){
 }
 
 function UpdateTextPlan(){
-//обновление плана для е-мейла
-updateMAILplan();
-// обновление инфы для плана выездных
-// let textDateForFLELDPlan = 'План на '+ textFromDateTXTbox + '.';
+    //обновление плана для е-мейла
+    createMAILplan();
+        setTimeout(UpdateTextPlan, 1000);
+}
+//////////////////////////////////////////////////////////////////////////////
+//                       обновление плана для выездных
+function createFLELDplan(){
+    const textFromDateTXTbox = document.getElementById('datePlane').innerHTML;
 
-    setTimeout(UpdateTextPlan, 1000);
+    const textFromPlaneFLELD = document.getElementById('FLELDplan').innerHTML;
+
+    let constructorTxtFLELD = `${textFromPlaneFLELD}`;
+
+    const boxTEXTFORFLELD = document.getElementById('planforFLELD')
+    boxTEXTFORFLELD.innerHTML = constructorTxtFLELD;
 }
 
 
+
+function UpdateFLELDPlan(){
+    createFLELDplan();
+    setTimeout(UpdateFLELDPlan, 2000);
+}
+///////////////////////////////////////////////////////////////////////// 
 
 window.onload = function() {
 editDate();
 editSIGNATURE();
 UpdateTextPlan();
+UpdateFLELDPlan();
 }
 
