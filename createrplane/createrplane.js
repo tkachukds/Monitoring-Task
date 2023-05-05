@@ -90,6 +90,17 @@ function show(id) {
     if (el.style.display === 'none') {el.style.display = 'initial';
 } else  {el.style.display = 'none'}
 }
+//////////////////////////////////////////////////////////////////////////////
+// 
+function nextStep(step){
+if (step === '2') {
+document.getElementById('standartTEXT').style.display = 'none';
+document.getElementById('editerPLAN').style.display = 'initial';
+document.getElementById('EXECUTBOX').style.display = 'initial';
+} else if (step === 'execut'){
+  
+ }
+}
 
 /////////////////////////////////////////////////////////////////////////////
 // действия, когда код для страницы будет загружен полностью и страница будет полносью готова
