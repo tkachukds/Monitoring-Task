@@ -84,7 +84,15 @@ function copyPlanfromFLELinMAILplan(){
 txtFromPLANjob.innerHTML = txtFromPlaneFLELD.innerHTML ;
 }
 /////////////////////////////////////////////////////////////////////////////
-// действия, когда код будет загружен полностью 
+//скрыть/показать объекст
+function show(id) {
+    let el = document.getElementById(id);
+    if (el.style.display === 'none') { el.style.display = 'initial';
+  } else {el.style.display = 'none';}
+}
+
+/////////////////////////////////////////////////////////////////////////////
+// действия, когда код для страницы будет загружен полностью и страница будет полносью готова
 window.onload = function() {
 editDate();
 editSIGNATURE();

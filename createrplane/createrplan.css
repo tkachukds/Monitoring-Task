@@ -1,3 +1,8 @@
+#signatureBox {
+display: none;
+color: #fff;
+}
+
 #planforFLELD {
     min-height: 500px;
 }
