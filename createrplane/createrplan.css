@@ -35,9 +35,15 @@ color: #fff;
 
 
 #standartTEXT {
+    display: none;
+    top: 0px;
+    margin-top: 0px;
   width: 20%;
-  float: right;
+  /* float: right; */
+position: absolute;
+right: 5%;
 
+background-color: #000000a2;
     }
 
 #boxEDITER {
@@ -85,4 +91,9 @@ button {
     color:#fff!important;
     text-shadow: 1px 1px 1px #000;
     background-color: #9494948a;
+}
+
+#boxCREATERPLAN {
+    max-width: 100%;
+    max-height: 100%;
 }
