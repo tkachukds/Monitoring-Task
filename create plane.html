@@ -1,19 +1,24 @@
 <link rel="stylesheet" href="createrplane/createrplan.css">
+<link rel="stylesheet" href="createrplane/buttons.css">
 
+<header>
+  <button class="glow-on-hover" type="button" onclick="net();">Дата и подпись</button>
+  <button class="glow-on-hover" type="button" onclick="net();">План письма и выездных</button>
+  <button class="glow-on-hover" type="button" onclick="net();">Готовый план</button>
+</header>
 
 <div id="textPLAN">
-
-<div id="standartTEXT">
+ <div id="standartTEXT">
  <div class="dateBox card">
     <h4>Дата выезда</h4>
     <div id="datePlane" class="boxTEXT" contenteditable="true"></div>
     <p>
-      <button class="glow-on-hover" type="button" onclick="show('signatureBox');">Изменить подпись</button>
+      <button type="button" onclick="show('signatureBox');">Изменить подпись</button>
  </div>
   <div class="signatureBox" id="signatureBox">
     <h4>Ваша подпись в письме</h4>
     <div id="signatureMAIL" class="boxTEXT" contenteditable="true"></div>
-    <button class="glow-on-hover" type="button" onclick="net();">Сохранить подпись (не реализовано)</button>
+    <button type="button" onclick="net();">Сохранить подпись (не реализовано)</button>
   </div>
 </div>
 
@@ -25,7 +30,7 @@
     <div id="FLELDplan" class="boxTEXT" contenteditable="true">
     </div>
  </div> 
- <button class="glow-on-hover" type="button" onclick="copyPlanfromFLELinMAILplan();">>>>>>>>>>>>></button>
+ <button type="button" onclick="copyPlanfromFLELinMAILplan();">>>>>>>>>>>>></button>
  <div class="boxEditPLANEmail">
     <h4>План ДЛЯ ПИСЬМА</h4>
     <div id="MAILplan" class="boxTEXT" contenteditable="true">
