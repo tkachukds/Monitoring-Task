@@ -1,3 +1,56 @@
-<div>
-Привет, я отделбный файл создания ПЛАНА
+<link rel="stylesheet" href="createrplane/createrplan.css">
+
+
+<div id="textPLAN">
+
+<div id="standartTEXT">
+
+ <div class="dateBox card">
+    <h4>Дата выезда</h4>
+    <div id="datePlane" class="boxTEXT" contenteditable="true"></div>
+ </div>
+ <div class="signatureBox card">
+    <h4>Ваша подпись в письме</h4>
+    <div id="signatureMAIL" class="boxTEXT" contenteditable="true"></div>
+ </div>
 </div>
+
+
+<div id="boxEDITER" class="card ">
+
+ <div class="boxEditPlaneFLELD">
+    <h4>План ДЛЯ ВЫЕЗДНЫХ</h4>
+    <div id="FLELDplan" class="boxTEXT" contenteditable="true">
+        <p><strong>Вадим ПРИМЕРОВ (электронщик ТО)</strong> <br />- Выходной НАПРИМЕР</p>
+        <p><strong>Джейк Айв (стажер ТО)</strong><br /><strong>- ППС ПРИМЕР</strong> (к 09:00)<br /> 1. Поменять то-то(см.фото)<br /> 2. Подключение того-то.</p>
+
+    </div>
+ </div> 
+
+ <div class="boxEditPLANEmail">
+    <h4>План ДЛЯ ПИСЬМА</h4>
+    <div id="MAILplan" class="boxTEXT" contenteditable="true">
+        <p><strong>Джейк Айв (стажер ТО)</strong><br /><strong>- ППС ПРИМЕР</strong> (к 09:00)<br />1. Поменять&nbsp;<br />2. Подключить</p>
+
+    </div>
+ </div>
+
+</div>
+
+<div class=" card" id="executTEXT">
+ <div class="boxEXEplan">
+   <h4>Готовый план для выездных:</h4>
+   <div id="planforFLELD" class="boxTEXT" contenteditable="true"></div>
+</div> 
+   <div class="boxEXEmail">
+    <h4>Готовое письмо:</h4>
+    <div id="planforMAIL" class="boxTEXT" contenteditable="true">готовое письмо</div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<script src="createrplane/createrplane.js"></script>

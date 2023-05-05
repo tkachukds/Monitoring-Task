@@ -1,0 +1,78 @@
+#planforFLELD {
+    min-height: 500px;
+}
+
+#planforMAIL {
+    min-height: 500px;
+}
+
+#datePlane {
+    text-align: center;
+    font-size: 20px;
+}
+
+#executTEXT {
+    display: flex;
+    margin-top: 200px;
+}
+
+
+.boxEXEmail {
+    margin-top: 0px;
+    width: 45%;
+    margin-left: auto; 
+}
+
+.boxEXEplan {
+    margin-top: 0px;
+    width: 45%;
+    margin-right: auto; 
+}
+
+
+#standartTEXT {
+  width: 20%;
+  float: right;
+
+    }
+
+#boxEDITER {
+    display: flex;
+width: 75%;
+
+}
+
+.boxEditPLANEmail {
+    width: 45%;
+    margin-left: auto;
+}
+
+#MAILplan {
+    min-height: 170px;
+  }
+
+#FLELDplan {
+    min-height: 170px;
+}
+
+.boxEditPlaneFLELD {
+    width: 45%;
+    margin-right: auto;
+}
+
+
+/* для блока */
+.card {
+    color: #ffffff;
+    border: 1px solid;
+    border-color: #b6b6b6;
+    
+  }
+
+/* чтобы текст подсвечивался */
+.boxTEXT {
+    color: #000000;
+    background-color: #ffffff;
+    border: 3px solid #ecbcbc;
+  }
+
