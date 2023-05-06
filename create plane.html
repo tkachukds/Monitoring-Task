@@ -1,23 +1,33 @@
 <link rel="stylesheet" href="createrplane/createrplan.css">
+<link rel="stylesheet" href="createrplane/buttons.css">
 
+<header>
+  <button class="glow-on-hover" type="button" onclick="show('standartTEXT');">Дата и подпись</button>
+  <button class="glow-on-hover" type="button" onclick="show('editerPLAN');">Промежуточный план</button>
+  <button class="glow-on-hover" type="button" onclick="show('EXECUTBOX');">Готовый план</button>
+</header>
 
-<div id="textPLAN">
-
-<div id="standartTEXT">
- <div class="dateBox card">
+<div id="boxCREATERPLAN">
+ 
+  <div id="standartTEXT">
+    <div id="blackback"></div>
+<div id="boxSTANDART">
+  <button type="button" onclick="show('standartTEXT')">Скрыть</button>
+   <div class="dateBox card">
     <h4>Дата выезда</h4>
     <div id="datePlane" class="boxTEXT" contenteditable="true"></div>
     <p>
-      <button class="glow-on-hover" type="button" onclick="show('signatureBox');">Изменить подпись</button>
  </div>
   <div class="signatureBox" id="signatureBox">
     <h4>Ваша подпись в письме</h4>
     <div id="signatureMAIL" class="boxTEXT" contenteditable="true"></div>
-    <button class="glow-on-hover" type="button" onclick="net();">Сохранить подпись (не реализовано)</button>
+    <button type="button" onclick="nextStep('2')">Следующий шаг</button>
   </div>
 </div>
+</div>
 
-
+<div id="editerPLAN">
+  <button type="button" onclick="show('editerPLAN')"> Скрыть </button>
 <div id="boxEDITER" class="card ">
 
  <div class="boxEditPlaneFLELD">
@@ -25,26 +35,30 @@
     <div id="FLELDplan" class="boxTEXT" contenteditable="true">
     </div>
  </div> 
- <button class="glow-on-hover" type="button" onclick="copyPlanfromFLELinMAILplan();">>>>>>>>>>>>></button>
+ <button type="button" onclick="copyPlanfromFLELinMAILplan();">>>>>>>>>>>>>>>>>></button>
  <div class="boxEditPLANEmail">
     <h4>План ДЛЯ ПИСЬМА</h4>
     <div id="MAILplan" class="boxTEXT" contenteditable="true">
-
+  
     </div>
+
  </div>
+</div>
 
 </div>
 
+<div id="EXECUTBOX">
+  <button type="button" onclick="show('EXECUTBOX')"> Скрыть </button>
 <div class=" card" id="executTEXT">
- <div class="boxEXEplan">
+ <div class="boxEXEplan" id="boxEXEplan">
    <h4>Готовый план для выездных:</h4>
    <div id="planforFLELD" class="boxTEXT" contenteditable="true"></div>
 </div> 
-   <div class="boxEXEmail">
+   <div class="boxEXEmail" id="boxEXEmail">
     <h4>Готовое письмо:</h4>
     <div id="planforMAIL" class="boxTEXT" contenteditable="true">готовое письмо</div>
   </div>
-</div>
+</div></div>
 
 
 
