@@ -48,8 +48,7 @@ datePlane.innerText =  newdate;
 
 function createMAILplan(){
     let textFromDateTXTbox = document.getElementById('datePlane').innerHTML; // текстблок ДАТЫ 
-    let standartTEXTforMAIL = textForMail[0] + textFromDateTXTbox + textForMail[1];
-    
+    let standartTEXTforMAIL = textForMail[0] + textFromDateTXTbox + textForMail[1];    
     let standartTEXTMAIL = standartTEXTforMAIL;
      const textFromPLANjob = document.getElementById('MAILplan').innerHTML; // текст бокс для внемения плана для е мейл сообщения
      let textFromSIGNATURE = document.getElementById('signatureMAIL').innerHTML;
@@ -58,7 +57,7 @@ function createMAILplan(){
      const boxTEXTFORMAIL = document.getElementById('planforMAIL')
      boxTEXTFORMAIL.innerHTML = textForMAILplan;
     
-    }
+}
 
 function UpdateTextPlan(){
     //обновление плана для е-мейла
