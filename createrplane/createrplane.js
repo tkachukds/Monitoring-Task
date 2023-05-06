@@ -87,21 +87,8 @@ txtFromPLANjob.innerHTML = txtFromPlaneFLELD.innerHTML ;
 //скрыть/показать объекст
 function show(id) {
     let el = document.getElementById(id);
-    if (el.style.display === 'none') {el.style.display = 'initial';
-} else  {el.style.display = 'none'}
-}
-//////////////////////////////////////////////////////////////////////////////
-// 
-function nextStep(step){
-if (step === '3') {
-document.getElementById('standartTEXT').style.display = 'none';
-document.getElementById('editerPLAN').style.display = 'initial';
-document.getElementById('EXECUTBOX').style.display = 'initial';
-} else if (step === '2'){
-  alert('шаг на реализации');
-} else if (step === 'execut'){
-  
- }
+    if (el.style.display === 'none') { el.style.display = 'initial';
+  } else {el.style.display = 'none';}
 }
 
 /////////////////////////////////////////////////////////////////////////////
