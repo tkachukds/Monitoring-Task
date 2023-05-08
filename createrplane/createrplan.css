@@ -62,7 +62,7 @@ display: flex;
 .card {
     color: #ffffff;
     border:1px  solid;
-    border-radius: 0px 20px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     border-color: #9090907e;
     
   }
@@ -76,11 +76,12 @@ display: flex;
   }
 
   .BLACKcard {
-    color: #000000;
-    border:dashed;
-    border-color: #00000079;
+    border: 2px dashed;
+    border-color: #0000002f;
   }
 
+
+  
 /* чтобы текст подсвечивался */
 .boxTEXT {
     color: #000000;
