@@ -1,4 +1,12 @@
-var Colleagues = ['Джейк Айв (сотрудник ТО)',
+let loaderDataNamePPS = ['- Выходной',
+'ППС Люберцы Октябрьский пр-т',
+'Егор Порохов (сотрудник ТО)',
+'Денис Ткачук (стажер ТО)',
+'Игорь Григоров (сотрудник ТО)',
+'Владислав Ражев (Хаус-Мастер)',
+'Евгений Городнов (Хаус-Мастер)'];
+
+let loaderDATAColleagues = ['Джейк Айв (сотрудник ТО)',
 'Вадим Перегудов (электронщик ТО)',
 'Егор Порохов (сотрудник ТО)',
 'Денис Ткачук (стажер ТО)',
@@ -6,14 +14,12 @@ var Colleagues = ['Джейк Айв (сотрудник ТО)',
 'Владислав Ражев (Хаус-Мастер)',
 'Евгений Городнов (Хаус-Мастер)'];
 
-var allNamePPS = ['- Выходной',
-'ППС Люберцы Октябрьский пр-т',
-'Егор Порохов (сотрудник ТО)',
-'Денис Ткачук (стажер ТО)',
-'Игорь Григоров (сотрудник ТО)',
-'Владислав Ражев (Хаус-Мастер)',
-'Евгений Городнов (Хаус-Мастер)'];
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var Colleagues = loaderDATAColleagues;
+var allNamePPS = loaderDataNamePPS;
+
+
+///
 let textFromDateTXTbox = document.getElementById('datePlane').innerHTML; // текстблок ДАТЫ 
 let signatureMAIL = document.getElementById('signatureMAIL'); // текстблок Подпись для е мейла
 
@@ -159,21 +165,23 @@ let cardPPSjob = `
  `;
 
 function addCardPPSJob(){
-   let el = document.getElementById('allPPSjobs');
-    el.innerHTML = el.innerHTML + cardPPSjob;
+    // let div = document.createElement(cardPPSjob);
+let el = document.getElementById('allPPSjobs');
+el.innerHTML += cardPPSjob;
+
 }
 
 function clearCardPPSjob() {
     const Colleague = document.getElementById('Name-Colleague');
-    Colleague.innerHTML = '';
+    Colleague.value = '';
    let allPPSjobs = document.getElementById('allPPSjobs');
-   allPPSjobs.innerHTML = '';
-   addCardPPSJob();
+   allPPSjobs.innerHTML = cardPPSjob;
+   DATAlistload() ;
 }
 //////////////////////////////////////////////////////////////////////////////////
 //варианты в списке 
 
-
+function DATAlistload() {
 var listColleague = document.getElementById('Colleague');
 Colleagues.forEach(function(item){
    var option = document.createElement('option');
@@ -188,7 +196,7 @@ allNamePPS.forEach(function(item){
    option.value = item;
    listNamePPS.appendChild(option);
 });
-
+}
 
 
 //////////////////////////////////////////////////////////////////////////////
@@ -201,4 +209,6 @@ editDate();
 editSIGNATURE();
 UpdateTextPlan();
 UpdateFLELDPlan();
+DATAlistload();
+addCardPPSJob();
 }
