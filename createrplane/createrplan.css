@@ -97,6 +97,11 @@ button {
         margin-left: 20px;
     }
 
+    #pastePLAN {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
 #boxCREATERPLAN {
     z-index: -2;
     width: 100%;
@@ -118,4 +123,14 @@ button {
 
 #EXECUTBOX {
     margin-top: 20px;
+}
+
+#colleague {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#blockListJobs {
+    margin-top: 10px;
 }
