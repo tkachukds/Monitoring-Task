@@ -57,9 +57,15 @@ display: flex;
 /* для блока */
 .card {
     color: #ffffff;
-    border: 1px solid;
+ 
     border-color: #b6b6b6;
     
+  }
+
+  .BLACKcard {
+    color: #000000;
+    border:dashed;
+    border-color: #00000079;
   }
 
 /* чтобы текст подсвечивался */
@@ -92,16 +98,6 @@ button {
 
     }
 
-    #listJOBplan{
-        width: 90%;
-        margin-left: 20px;
-    }
-
-    #pastePLAN {
-        margin-top: 20px;
-        margin-left: 20px;
-    }
-
 #boxCREATERPLAN {
     z-index: -2;
     width: 100%;
@@ -125,15 +121,33 @@ button {
     margin-top: 20px;
 }
 
-#blockListJobs {
-    margin-top: 10px;
+#BOXlistJOB{
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
+ 
 }
 
-#LISTJOBS-Colleague {
+#BOXlistJOB-CARDplan {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#CARDplan-Colleague {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+#CARDplan-BOXListJobs {
+    margin-top: 10px;
+}
+
+
+#LISTJOBS-NamePPS {
+    width: 300px
 }
 
 #LISTJOBS-JOBS {
