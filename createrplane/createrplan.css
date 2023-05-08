@@ -69,10 +69,10 @@ display: flex;
 
   .cardCOLOR {
     color: #ffffff;
-    border:1px  solid;
-    border-radius: 0px 20px 0px 0px;
-    border-color: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     
+    border: 1px solid transparent;
+    border-image: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    border-image-slice: 1;
   }
 
   .BLACKcard {
