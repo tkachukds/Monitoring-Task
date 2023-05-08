@@ -79,8 +79,6 @@ button {
 #boxSTANDART {
     z-index: 0;
   width: 20%;
-  /* float: right; */
-background-color: #000000ef;
 }
 
 #standartTEXT {
