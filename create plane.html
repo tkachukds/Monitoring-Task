@@ -4,7 +4,7 @@
 <header>
   <button class="glow-on-hover" type="button" onclick="show('standartTEXT');">Дата, подпись, работы</button>
   <button class="glow-on-hover" type="button" onclick="show('editerPLAN');">Промежуточный план</button>
-  <button class="glow-on-hover" type="button" onclick="show('EXECUTBOX');">Готовый план</button>
+  <button class="glow-on-hover" type="button" onclick="show('EXECUTBOX');">ГОТОВЫЙ ПЛАН</button>
 </header>
 
 <div id="boxCREATERPLAN">
@@ -23,8 +23,8 @@
   </div>
 <div id="BOXlistJOB">
   <button type="button" onclick="show('boxSignature')">Изменить подпись</button>
-
-  <div class="dateBox card">
+  <button type="button" onclick="show('boxDATEplane')">Изменить дату плана</button>
+  <div class="dateBox" id="boxDATEplane" style="color: aliceblue; text-align: center;">
     <h4>Дата выезда: </h4>
     <div id="datePlane" class="boxTEXT" contenteditable="true"></div>
     <p>
@@ -35,13 +35,12 @@
   <div id="CARDplan" class="cardCOLOR">
     <div id="CARDplan-Colleague">
       <div class="boxTEXT" contenteditable="true" id="Name-Colleague"> Джейк Айв (пример стажер ТО) </div>
-      <p><button type="button" onclick="">+ Добавить новое ППС в план сотруднику</button>
     </div>
-    <div id="CARDplan-BOXListJobs">
+    <div id="CARDplan-BOXnewPPSlistJobs">
     <div id="LISTJOBS-NamePPS" class="boxTEXT" contenteditable="true">ППС ПРИМЕРНЫЙ</div> 
     <div id="LISTJOBS-JOBS" class="boxTEXT" contenteditable="true">1. Ремонт </div>
 </div> 
-
+<p><button type="button" onclick="">+ новое ППС в план сотруднику</button>
   </div>
   <button type="button" onclick="">Внести данные в план</button>
 </div>
