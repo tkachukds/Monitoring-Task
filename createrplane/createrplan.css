@@ -125,12 +125,17 @@ button {
     margin-top: 20px;
 }
 
+#blockListJobs {
+    margin-top: 10px;
+}
+
 #colleague {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
-#blockListJobs {
-    margin-top: 10px;
+#listJOBS {
+    margin-top: 2px;
 }
