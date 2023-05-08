@@ -34,11 +34,19 @@
 
   <div id="CARDplan" class="cardCOLOR">
     <div id="CARDplan-Colleague">
-      <div class="boxTEXT" contenteditable="true" id="Name-Colleague"> Джейк Айв (пример стажер ТО) </div>
+      <!-- <div class="boxTEXT" contenteditable="true" id="Name-Colleague"> Джейк Айв (сотрудник ТО) </div> -->
+      <input id="Name-Colleague"  class="boxTEXT"  list="Colleague"></input>
+<datalist id="Colleague"></datalist>
     </div>
 
 <div id="allPPSjobs">
- <!-- сюда будут загружаться карточки с ППС и работами в них -->
+
+ <div id="CARDplan-BOXnewPPSlistJobs">
+  <input id="LISTJOBS-NamePPS"  class="boxTEXT"  list="NamePPS"></input>
+  <datalist id="NamePPS"></datalist>
+  <div id="LISTJOBS-JOBS" class="boxTEXT" contenteditable="true" style="min-height: 60px;">1. </div>
+  </div>
+   <!-- сюда будут загружаться карточки с ППС и работами в них -->
 </div>
 <p><button type="button" onclick="addCardPPSJob();">+ новое ППС в план сотруднику</button>
   </div>

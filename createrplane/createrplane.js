@@ -1,3 +1,19 @@
+var Colleagues = ['Джейк Айв (сотрудник ТО)',
+'Вадим Перегудов (электронщик ТО)',
+'Егор Порохов (сотрудник ТО)',
+'Денис Ткачук (стажер ТО)',
+'Игорь Григоров (сотрудник ТО)',
+'Владислав Ражев (Хаус-Мастер)',
+'Евгений Городнов (Хаус-Мастер)'];
+
+var allNamePPS = ['- Выходной',
+'Вадим Перегудов (электронщик ТО)',
+'Егор Порохов (сотрудник ТО)',
+'Денис Ткачук (стажер ТО)',
+'Игорь Григоров (сотрудник ТО)',
+'Владислав Ражев (Хаус-Мастер)',
+'Евгений Городнов (Хаус-Мастер)'];
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 let textFromDateTXTbox = document.getElementById('datePlane').innerHTML; // текстблок ДАТЫ 
 let signatureMAIL = document.getElementById('signatureMAIL'); // текстблок Подпись для е мейла
 
@@ -105,7 +121,7 @@ document.getElementById('EXECUTBOX').style.display = 'initial';
 
 }
 
-function AddDatainPLAN(){
+function AddDatainPLAN(){//старая логика - не подключена
     Colleague = document.getElementById('Name-Colleague').innerText;
 let htmlColleague = '<b>' + Colleague + '</b>';
 PPS = document.getElementById('LISTJOBS-NamePPS').innerText;
@@ -123,12 +139,12 @@ function ADDallPLAN() {
     let FromPlaneFLELD = document.getElementById('FLELDplan'); // текстблок для внесения плана для выездных
 // добавим коллегу
 
-const Colleague = document.getElementById('Name-Colleague').innerText;
+const Colleague = document.getElementById('Name-Colleague').value;
 let htmlColleague = '<b>' + Colleague + '</b><p>';
 FromPlaneFLELD.innerHTML = FromPlaneFLELD.innerHTML + htmlColleague;
 // добавим все ППС и их работы
     for (let i = 0; i < PPS.length; i++) {
-        let exePPS = '<b> - '+PPS[i].innerText+'</b><p>';
+        let exePPS = '<b> - '+PPS[i].value+'</b><p>';
     FromPlaneFLELD.innerHTML = FromPlaneFLELD.innerHTML + exePPS + Jobs[i].innerText;
       }
 
@@ -136,9 +152,11 @@ FromPlaneFLELD.innerHTML = FromPlaneFLELD.innerHTML + htmlColleague;
 
 let cardPPSjob = `
 <div id="CARDplan-BOXnewPPSlistJobs">
-<div id="LISTJOBS-NamePPS" class="boxTEXT" contenteditable="true">ППС </div> 
-<div id="LISTJOBS-JOBS" class="boxTEXT" contenteditable="true" style="min-height: 60px;">1.</div>
-</div> `;
+<input id="LISTJOBS-NamePPS"  class="boxTEXT"  list="NamePPS"></input>
+<datalist id="NamePPS"></datalist>
+<div id="LISTJOBS-JOBS" class="boxTEXT" contenteditable="true" style="min-height: 60px;">1. </div>
+</div>
+ `;
 
 function addCardPPSJob(){
    let el = document.getElementById('allPPSjobs');
@@ -152,6 +170,26 @@ function clearCardPPSjob() {
    allPPSjobs.innerHTML = '';
    addCardPPSJob();
 }
+//////////////////////////////////////////////////////////////////////////////////
+//варианты в списке 
+
+
+var listColleague = document.getElementById('Colleague');
+Colleagues.forEach(function(item){
+   var option = document.createElement('option');
+   option.value = item;
+   listColleague.appendChild(option);
+});
+
+
+var listNamePPS = document.getElementById('NamePPS');
+allNamePPS.forEach(function(item){
+   var option = document.createElement('option');
+   option.value = item;
+   listNamePPS.appendChild(option);
+});
+
+
 
 //////////////////////////////////////////////////////////////////////////////
 // Vue.js
@@ -163,5 +201,4 @@ editDate();
 editSIGNATURE();
 UpdateTextPlan();
 UpdateFLELDPlan();
-addCardPPSJob();
 }
