@@ -78,12 +78,8 @@ button {
 
 #boxSTANDART {
     z-index: 0;
-    top: 0px;
-    margin-top: 10%;
   width: 20%;
   /* float: right; */
-position: absolute;
-margin-left: 35%;
 background-color: #000000ef;
 }
 
