@@ -105,9 +105,20 @@ document.getElementById('EXECUTBOX').style.display = 'initial';
 
 }
 
+function AddDatainPLAN(){
+    Colleague = document.getElementById('Name-Colleague').innerText;
+let htmlColleague = '<b>' + Colleague + '</b>';
+PPS = document.getElementById('LISTJOBS-NamePPS').innerText;
+let htmlPPS = '<b> - ' + PPS + '</b>';
+JobsList = document.getElementById('LISTJOBS-JOBS').innerHTML;
+
+newDataJobs = htmlColleague + '<p>' + htmlPPS + '<p>' + JobsList;
+let FromPlaneFLELD = document.getElementById('FLELDplan'); // текстблок для внесения плана для выездных
+    FromPlaneFLELD.innerHTML = FromPlaneFLELD.innerHTML + newDataJobs;
+}
+
 //////////////////////////////////////////////////////////////////////////////
 // Vue.js
-
 
 /////////////////////////////////////////////////////////////////////////////
 // действия, когда код для страницы будет загружен полностью и страница будет полносью готова
