@@ -30,10 +30,11 @@
     <p>
  </div>
 
-  <button type="button" onclick="clearCardPPSjob();" style="margin-left: 65%;">Очистить</button>
+
 
   <div id="CARDplan" class="cardCOLOR">
     <div id="CARDplan-Colleague">
+
       <!-- <div class="boxTEXT" contenteditable="true" id="Name-Colleague"> Джейк Айв (сотрудник ТО) </div> -->
       <input id="Name-Colleague"  class="boxTEXT"  list="Colleague"></input>
 <datalist id="Colleague"></datalist>
@@ -44,7 +45,7 @@
  <div id="CARDplan-BOXnewPPSlistJobs">
   <input id="LISTJOBS-NamePPS"  class="boxTEXT"  list="NamePPS"></input>
   <datalist id="NamePPS"></datalist>
-  <div id="LISTJOBS-JOBS" class="boxTEXT" contenteditable="true" style="min-height: 60px;">1. </div>
+  <div id="LISTJOBS-JOBS" class="boxTEXT" contenteditable="true" style="min-height: 60px;"></div>
   </div>
    <!-- сюда будут загружаться карточки с ППС и работами в них -->
 </div>
@@ -52,6 +53,7 @@
   </div>
 
   <button type="button" onclick="ADDallPLAN();">Внести данные в план</button>
+  <button type="button" onclick="clearCardPPSjob();" style="margin-left: 0%;">Очистить форму</button>
 </div>
   </div>
  </div>

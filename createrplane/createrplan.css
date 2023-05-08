@@ -174,3 +174,9 @@ button {
 #boxDATEplane{
     display: none;
 }
+
+#allPPSjobs {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}

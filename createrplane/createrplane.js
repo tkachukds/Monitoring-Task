@@ -7,7 +7,7 @@ var Colleagues = ['Джейк Айв (сотрудник ТО)',
 'Евгений Городнов (Хаус-Мастер)'];
 
 var allNamePPS = ['- Выходной',
-'Вадим Перегудов (электронщик ТО)',
+'ППС Люберцы Октябрьский пр-т',
 'Егор Порохов (сотрудник ТО)',
 'Денис Ткачук (стажер ТО)',
 'Игорь Григоров (сотрудник ТО)',
@@ -154,7 +154,7 @@ let cardPPSjob = `
 <div id="CARDplan-BOXnewPPSlistJobs">
 <input id="LISTJOBS-NamePPS"  class="boxTEXT"  list="NamePPS"></input>
 <datalist id="NamePPS"></datalist>
-<div id="LISTJOBS-JOBS" class="boxTEXT" contenteditable="true" style="min-height: 60px;">1. </div>
+<div id="LISTJOBS-JOBS" class="boxTEXT" contenteditable="true" style="min-height: 60px;"></div>
 </div>
  `;
 
