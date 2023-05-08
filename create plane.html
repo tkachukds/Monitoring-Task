@@ -2,16 +2,17 @@
 <link rel="stylesheet" href="createrplane/buttons.css">
 
 <header>
-  <button class="glow-on-hover" type="button" onclick="show('standartTEXT');">Дата и подпись</button>
+  <button class="glow-on-hover" type="button" onclick="show('standartTEXT');">Дата, подпись, работы</button>
   <button class="glow-on-hover" type="button" onclick="show('editerPLAN');">Промежуточный план</button>
   <button class="glow-on-hover" type="button" onclick="show('EXECUTBOX');">Готовый план</button>
 </header>
 
 <div id="boxCREATERPLAN">
  <div id="standartTEXT">
-  <div id="boxSTANDART">
-  <button type="button" onclick="show('standartTEXT')">Скрыть</button>
-   <div class="dateBox card">
+  <div id="blockFLEX">
+   <div id="boxSTANDART">
+   <button type="button" onclick="show('standartTEXT')">Скрыть</button>
+    <div class="dateBox card">
     <h4>Дата выезда</h4>
     <div id="datePlane" class="boxTEXT" contenteditable="true"></div>
     <p>
@@ -21,8 +22,13 @@
     <div id="signatureMAIL" class="boxTEXT" contenteditable="true"></div>
     <!-- <button type="button" onclick="nextStep('2')">Следующий шаг</button> -->
   </div>
+  
+  </div>
+<div id="listJOBplan" class="card">блок вставления плана
+  <div id="pastePLAN"></div>
 </div>
-</div>
+  </div>
+ </div>
 
 <div id="editerPLAN">
   <button type="button" onclick="show('editerPLAN')"> Скрыть </button>

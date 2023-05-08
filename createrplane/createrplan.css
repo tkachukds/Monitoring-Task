@@ -77,14 +77,24 @@ button {
 }
 
 #boxSTANDART {
+   
     z-index: 0;
   width: 20%;
 }
 
+#blockFLEX {
+   display: flex;    
+}
+
 #standartTEXT {
-    
+    margin-top: 20px;
     z-index: 0;
 
+    }
+
+    #listJOBplan{
+        width: 90%;
+        margin-left: 20px;
     }
 
 #boxCREATERPLAN {
@@ -103,7 +113,7 @@ button {
 }
 
 #editerPLAN {
-   margin-top: 10px;
+   margin-top: 20px;
 }
 
 #EXECUTBOX {
