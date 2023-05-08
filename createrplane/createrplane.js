@@ -141,8 +141,16 @@ let cardPPSjob = `
 </div> `;
 
 function addCardPPSJob(){
-    el = document.getElementById('allPPSjobs');
+   let el = document.getElementById('allPPSjobs');
     el.innerHTML = el.innerHTML + cardPPSjob;
+}
+
+function clearCardPPSjob() {
+    const Colleague = document.getElementById('Name-Colleague');
+    Colleague.innerHTML = '';
+   let allPPSjobs = document.getElementById('allPPSjobs');
+   allPPSjobs.innerHTML = '';
+   addCardPPSJob();
 }
 
 //////////////////////////////////////////////////////////////////////////////
