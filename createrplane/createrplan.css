@@ -96,8 +96,8 @@ button {
     background-color: #9494948a;
 }
 
-#boxSTANDART {
-   
+#boxSignature {
+   display: none;
     z-index: 0;
   width: 20%;
 }
@@ -128,10 +128,12 @@ button {
 }
 
 #editerPLAN {
+    display: none;
    margin-top: 20px;
 }
 
 #EXECUTBOX {
+    display: none;
     margin-top: 20px;
 }
 
