@@ -30,23 +30,17 @@
     <p>
  </div>
 
-  <button type="button" onclick="" style="margin-left: 65%;">+ Добавить нового сотрудника в план</button>
+  <!-- <button type="button" onclick="" style="margin-left: 65%;">+ Добавить нового сотрудника в план</button> -->
 
   <div id="CARDplan" class="cardCOLOR">
     <div id="CARDplan-Colleague">
       <div class="boxTEXT" contenteditable="true" id="Name-Colleague"> Джейк Айв (пример стажер ТО) </div>
     </div>
-<div id="CARDplan-BOXnewPPSlistJobs" class="WHITEcard">
-    <div id="LISTJOBS-NamePPS" class="boxTEXT" contenteditable="true">ППС ПРИМЕРНЫЙ</div> 
-    <div id="LISTJOBS-JOBS" class="boxTEXT" contenteditable="true" style="min-height: 60px;">1. Ремонт </div>
-</div> 
 
-<div id="CARDplan-BOXnewPPSlistJobs" class="WHITEcard">
-  <div id="LISTJOBS-NamePPS" class="boxTEXT" contenteditable="true">ППС ПРИМЕРНЫЙ2</div> 
-  <div id="LISTJOBS-JOBS" class="boxTEXT" contenteditable="true" style="min-height: 60px;">1. ВТОРОЙРемонт </div>
-</div> 
-
-<p><button type="button" onclick="">+ новое ППС в план сотруднику</button>
+<div id="allPPSjobs">
+ <!-- сюда будут загружаться карточки с ППС и работами в них -->
+</div>
+<p><button type="button" onclick="addCardPPSJob();">+ новое ППС в план сотруднику</button>
   </div>
 
   <button type="button" onclick="ADDallPLAN();">Внести данные в план</button>

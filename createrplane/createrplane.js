@@ -120,12 +120,29 @@ let FromPlaneFLELD = document.getElementById('FLELDplan'); // текстблок
 function ADDallPLAN() {
     let PPS = document.querySelectorAll('#LISTJOBS-NamePPS');
     let Jobs = document.querySelectorAll('#LISTJOBS-JOBS');
+    let FromPlaneFLELD = document.getElementById('FLELDplan'); // текстблок для внесения плана для выездных
+// добавим коллегу
+
+const Colleague = document.getElementById('Name-Colleague').innerText;
+let htmlColleague = '<b>' + Colleague + '</b><p>';
+FromPlaneFLELD.innerHTML = FromPlaneFLELD.innerHTML + htmlColleague;
+// добавим все ППС и их работы
     for (let i = 0; i < PPS.length; i++) {
         let exePPS = '<b> - '+PPS[i].innerText+'</b><p>';
-        let FromPlaneFLELD = document.getElementById('FLELDplan'); // текстблок для внесения плана для выездных
     FromPlaneFLELD.innerHTML = FromPlaneFLELD.innerHTML + exePPS + Jobs[i].innerText;
       }
 
+}
+
+let cardPPSjob = `
+<div id="CARDplan-BOXnewPPSlistJobs">
+<div id="LISTJOBS-NamePPS" class="boxTEXT" contenteditable="true">ППС </div> 
+<div id="LISTJOBS-JOBS" class="boxTEXT" contenteditable="true" style="min-height: 60px;">1.</div>
+</div> `;
+
+function addCardPPSJob(){
+    el = document.getElementById('allPPSjobs');
+    el.innerHTML = el.innerHTML + cardPPSjob;
 }
 
 //////////////////////////////////////////////////////////////////////////////
@@ -138,4 +155,5 @@ editDate();
 editSIGNATURE();
 UpdateTextPlan();
 UpdateFLELDPlan();
+addCardPPSJob();
 }
