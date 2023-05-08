@@ -11,28 +11,34 @@
  <div id="standartTEXT">
   <div id="blockFLEX">
    <div id="boxSTANDART">
-   <button type="button" onclick="show('standartTEXT')">Скрыть</button>
-    <div class="dateBox card">
-    <h4>Дата выезда</h4>
-    <div id="datePlane" class="boxTEXT" contenteditable="true"></div>
-    <p>
- </div>
-  <div class="signatureBox" id="signatureBox">
+   <button type="button" onclick="show('boxSTANDART')">Скрыть</button>
+  <div class="signatureBox card" id="signatureBox">
     <h4>Ваша подпись в письме</h4>
     <div id="signatureMAIL" class="boxTEXT" contenteditable="true"></div>
     <!-- <button type="button" onclick="nextStep('2')">Следующий шаг</button> -->
   </div>
   
   </div>
-<div id="BOXlistJOB" class="card">блок составления плана
+<div id="BOXlistJOB" class="card">
+  <button type="button" onclick="show('boxSTANDART')">Изменить подпись</button>
+
+  <div class="dateBox card">
+    <h4>Дата выезда: </h4>
+    <div id="datePlane" class="boxTEXT" contenteditable="true"></div>
+    <p>
+ </div>
+
+  <button type="button" onclick="" style="margin-left: 90%;">+</button>
+
   <div id="CARDplan" class="BLACKcard">
-    <div id="CARDplan-Colleague" class="boxTEXT" contenteditable="true">Джейк Айв (пример)</div>
+    <div id="CARDplan-Colleague" class="boxTEXT" contenteditable="true">Джейк Айв (пример стажер ТО)</div>
 <div id="CARDplan-BOXListJobs">
     <div id="LISTJOBS-NamePPS" class="boxTEXT" contenteditable="true">ППС ПРИМЕРНЫЙ</div>
     <div id="LISTJOBS-JOBS" class="boxTEXT" contenteditable="true">1. Ремонт </div>
 </div> 
 <button type="button" onclick="">Добавить в план</button>
   </div>
+
 </div>
   </div>
  </div>
