@@ -144,14 +144,13 @@ function ADDallPLAN() {
     let Jobs = document.querySelectorAll('#LISTJOBS-JOBS');
     let FromPlaneFLELD = document.getElementById('FLELDplan'); // текстблок для внесения плана для выездных
 // добавим коллегу
-
 const Colleague = document.getElementById('Name-Colleague').value;
 let htmlColleague = '<b>' + Colleague + '</b><p>';
 FromPlaneFLELD.innerHTML = FromPlaneFLELD.innerHTML + htmlColleague;
 // добавим все ППС и их работы
     for (let i = 0; i < PPS.length; i++) {
         let exePPS = '<b> - '+PPS[i].value+'</b><p>';
-    FromPlaneFLELD.innerHTML = FromPlaneFLELD.innerHTML + exePPS + Jobs[i].innerText;
+    FromPlaneFLELD.innerHTML = FromPlaneFLELD.innerHTML + exePPS + Jobs[i].innerHTML;
       }
 
 }
@@ -165,9 +164,14 @@ let cardPPSjob = `
  `;
 
 function addCardPPSJob(){
-    // let div = document.createElement(cardPPSjob);
+ 
+    let data = cardPPSjob;
+    const newDiv = document.createElement("div");
 let el = document.getElementById('allPPSjobs');
-el.innerHTML += cardPPSjob;
+// newDiv.appendChild(document.create(''+data));
+const currentDiv = document.getElementById("div1");
+el.insertAdjacentHTML('afterbegin', data);
+DATAlistload() ;
 
 }
 
@@ -180,8 +184,6 @@ function clearCardPPSjob() {
 }
 //////////////////////////////////////////////////////////////////////////////////
 //варианты в списке 
-
-function DATAlistload() {
 var listColleague = document.getElementById('Colleague');
 Colleagues.forEach(function(item){
    var option = document.createElement('option');
@@ -189,7 +191,7 @@ Colleagues.forEach(function(item){
    listColleague.appendChild(option);
 });
 
-
+function DATAlistload() {
 var listNamePPS = document.getElementById('NamePPS');
 allNamePPS.forEach(function(item){
    var option = document.createElement('option');
@@ -209,6 +211,6 @@ editDate();
 editSIGNATURE();
 UpdateTextPlan();
 UpdateFLELDPlan();
-DATAlistload();
 addCardPPSJob();
+
 }
