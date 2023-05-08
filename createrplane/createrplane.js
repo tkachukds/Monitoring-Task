@@ -117,6 +117,17 @@ let FromPlaneFLELD = document.getElementById('FLELDplan'); // текстблок
     FromPlaneFLELD.innerHTML = FromPlaneFLELD.innerHTML + newDataJobs;
 }
 
+function ADDallPLAN() {
+    let PPS = document.querySelectorAll('#LISTJOBS-NamePPS');
+    let Jobs = document.querySelectorAll('#LISTJOBS-JOBS');
+    for (let i = 0; i < PPS.length; i++) {
+        let exePPS = '<b> - '+PPS[i].innerText+'</b><p>';
+        let FromPlaneFLELD = document.getElementById('FLELDplan'); // текстблок для внесения плана для выездных
+    FromPlaneFLELD.innerHTML = FromPlaneFLELD.innerHTML + exePPS + Jobs[i].innerText;
+      }
+
+}
+
 //////////////////////////////////////////////////////////////////////////////
 // Vue.js
 
