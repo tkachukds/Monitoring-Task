@@ -3,7 +3,7 @@ function load_header() {
 }
 
 function load_PLANEbox() {
-    document.getElementById("boxPLANECREATER").innerHTML='<object type="text/html" data="create plane.html" style="width: 100%;height: 100%;"></object>';
+    document.getElementById("boxPLANECREATER").innerHTML='<object type="text/html" data="createrplane/create plane.html" style="width: 100%;height: 100%;"></object>';
 }
 
 

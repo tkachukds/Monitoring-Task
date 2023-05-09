@@ -100,7 +100,6 @@ button {
 }
 
 #boxSignature {
-   display: none;
     z-index: 0;
   width: 20%;
 }
